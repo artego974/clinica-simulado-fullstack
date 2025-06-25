@@ -13,7 +13,7 @@ html, body {
 }
 
 header {
-    background-color: #00AEEF;
+    background-color: #2563EB;
     width: 100%;
     height: 80px;
     position: fixed;
@@ -27,17 +27,25 @@ header {
     padding: 0 20px;    
 }
 
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px; 
+}
+
+
 .logo {
     margin-left: 0.5%;
     height: 100%;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .logo img {
-    height: 60px;
+    height: 50px;
     width: auto;
-    border-radius: 50px;
+    border-radius: 50%;
+    transition: height 0.3s ease, margin 0.3s ease;
 }
 
 .nav {
@@ -67,19 +75,19 @@ header {
 }
 
 .btn {
-    padding: 10px 22px; /* Aumenta altura e largura */
+    padding: 10px 22px; 
     border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 1.05rem; /* Aumenta a fonte */
-    min-width: 150px; /* Largura mínima opcional */
+    font-size: 1.05rem; 
+    min-width: 150px; 
     text-align: center;
 }
 
 
 .login {
-    background-color: #00AEEF;
+    background-color: #2563EB;
     color: white;
     border: none;
 }
@@ -90,8 +98,8 @@ header {
 
 .cadastro {
     background-color: transparent;
-    color: #00AEEF;
-    border: 2px solid #00AEEF;
+    color: #2563EB;
+    border: 2px solid #2563EB;
 }
 
 .cadastro:hover {
@@ -113,31 +121,34 @@ main {
 
 .space {
     min-height: 100vh;
+    background-color: #ffffff;
 }
 
 .home-section {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza no meio */
-    padding: 40px 80px;
+    justify-content: center;
+    padding: 60px 40px;
     min-height: 100vh;
     background-color: #ffffff;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .home-text {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-left: 50px; /* empurra mais pra direita */
+    padding: 0; /* remova o padding lateral aqui */
 }
 
 .home-text h1 {
     font-size: 3rem;
-    color: #00AEEF;
+    color: #2563EB;
 }
 
 .home-text p {
@@ -148,38 +159,54 @@ main {
 
 .home-image {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .home-image img {
-    width: 110%;
+    width: 100%;
     max-width: 600px;
     height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
+@media (max-width: 480px) {
+    .home-text h1 {
+        font-size: 2rem;
+    }
+
+    .home-text p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        min-width: 120px;
+    }
+}
+
 
 #sobre {
     min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
 }
 
 
 .team-section {
     width: 100%;
     padding: 60px 40px;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     text-align: center;
 }
 
 .team-section h2 {
     font-size: 2rem;
-    color: #00AEEF;
+    color: #2563EB;
     margin-bottom: 5%;
 }
 
@@ -212,7 +239,7 @@ main {
     margin-bottom: 15px;
     object-fit: cover;
     aspect-ratio: 1/1;
-    border: 3px solid #00AEEF;
+    border: 3px solid #2563EB;
 }
 
 .team-card h3 {
@@ -225,18 +252,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
 }
 
 .tratamentos-section {
     padding: 60px 40px;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     text-align: center;
 }
 
 .tratamentos-section h2 {
     font-size: 2.5rem;
-    color: #00AEEF;
+    color: #2563EB;
     margin-bottom: 50px;
 }
 
@@ -269,13 +296,13 @@ main {
     margin-bottom: 15px;
     aspect-ratio: 16/9;
     object-fit: cover;
-    border: 3px solid #00AEEF;
+    border: 3px solid #2563EB;
 }
 
 
 .tratamento-card h3 {
     margin-bottom: 10px;
-    color: #00AEEF;
+    color: #2563EB;
     font-size: 1.3rem;
 }
 
@@ -289,8 +316,8 @@ main {
     display: inline-block;
     margin-top: 12px;
     padding: 8px 18px;
-    border: 2px solid #00AEEF;
-    color: #00AEEF;
+    border: 2px solid #2563EB;
+    color: #2563EB;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -298,10 +325,159 @@ main {
 }
 
 .btn-saiba-mais:hover {
-    background-color: #00AEEF;
+    background-color: #2563EB;
     color: white;
     transform: scale(1.05);
 }
+
+.especialidades-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.especialidades-subtitle {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .especialidades-grid {
+        grid-template-columns: 1fr; 
+    }
+    .logo {
+        margin-left: -15px; 
+    }
+
+    .logo img {
+        height: 40px; 
+    }
+
+    .nav {
+        gap: 3px;
+    }
+
+    .nav a {
+        font-size: 0.8rem;
+        padding: 2px 4px;
+    }
+}
+
+.especialidade-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.especialidade-card:hover {
+    transform: translateY(-5px);
+}
+
+.especialidade-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.especialidade-card h3 {
+    margin-bottom: 10px;
+    color: #2563EB;
+}
+
+.especialidade-card p {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+
+.contato-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.contato-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.contato-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contato-info {
+    flex: 1 1 300px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+.contato-form {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contato-form button {
+    background-color: #2563EB; /* azul-600 */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato-form button:hover {
+    background-color: #2563EB; /* azul-700 */
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
 @media (max-width: 1200px) {
     .tratamentos-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -318,4 +494,5 @@ main {
     .tratamentos-grid {
         grid-template-columns: 1fr;
     }
+    
 }
